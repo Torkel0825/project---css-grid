@@ -49,11 +49,20 @@ body {
   padding: 3%;
   margin: 6%;
 }
-p {
+h5 {
   font-size: var(--font_size);
+  font-weight: var(--big_text);
+}
+p {
   font-family: var(--Text_Barlow);
+  font-size: var(--font_size);
+  font-weight: var(--small_text);
 }
 .conT {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   margin: 7px;
   border: none;
   border-radius: 3%;
@@ -94,4 +103,35 @@ p {
   background-color: var(--white);
   color: var(--grey400);
   grid-area: e;
+}
+
+@media screen and (max-width: 375px) {
+  .pallet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10fr;
+    grid-template-areas:
+      "a"
+      "a"
+      "b"
+      "c"
+      "d"
+      "d"
+      "e"
+      "e"
+      "e";
+    grid-gap: 5px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .pallet {
+    grid-template-columns: 5fr;
+    grid-template-rows: auto;
+    /* grid-template-areas:
+      "a b"
+      "a c"
+      "d e"
+      "d e"
+      ". e"; */
+  }
 }
