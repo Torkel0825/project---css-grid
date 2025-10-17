@@ -1,0 +1,97 @@
+/*
+
+- Mobile: 375px
+- Desktop: 1440px
+
+
+*/
+:root {
+  --very_light_purple: hsl(260, 100%, 95%);
+  --light_purple: hsl(264, 82%, 80%);
+  --dark_purple: hsl(263, 55%, 52%);
+
+  --white: hsl(0, 0%, 100%);
+  --grey100: hsl(214, 17%, 92%);
+  --grey200: hsl(0, 0%, 81%);
+  --grey400: hsl(224, 10%, 45%);
+  --grey500: hsl(217, 19%, 35%);
+  --dark_blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+
+  --font_size: 13px;
+
+  --Text_Barlow: "Barlow Semi Condensed", sans-serif;
+  --small_text: 500;
+  --big_text: 600;
+  --shadow: 0px 4px 10px 0px hsl(0, 0%, 7%);
+}
+/*
+
+font-family: "Barlow Semi Condensed", sans-serif;
+font-weight: 500;
+
+font-family: "Barlow Semi Condensed", sans-serif;
+font-weight: 600;
+
+*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /**/
+  justify-self: center;
+  align-self: center;
+  background-color: var(--grey100);
+
+  box-shadow: var(--shadow);
+  padding: 3%;
+  margin: 6%;
+}
+p {
+  font-size: var(--font_size);
+  font-family: var(--Text_Barlow);
+}
+.conT {
+  margin: 7px;
+  border: none;
+  border-radius: 3%;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+.pallet {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "a a b e"
+    "c d d e";
+  grid-gap: 15px;
+}
+
+.boxDaniel {
+  background-color: var(--dark_purple);
+  color: var(--white);
+  grid-area: a;
+}
+.boxJonathan {
+  background-color: var(--grey400);
+  color: var(--white);
+  grid-area: b;
+}
+.boxJeanette {
+  background-color: var(--white);
+  color: var(--grey400);
+  grid-area: c;
+}
+.boxPatrick {
+  background-color: var(--grey400);
+  color: var(--grey100);
+  grid-area: d;
+}
+.boxKira {
+  background-color: var(--white);
+  color: var(--grey400);
+  grid-area: e;
+}
